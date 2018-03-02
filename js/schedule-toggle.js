@@ -35,7 +35,8 @@ Schedule.Toolbox = Schedule.Toolbox || {
         },
         setDeliveringNow:function () {
             //if delivering now is true, turn on delivery and caption
-            if(self.deliveringNow) {
+            var areEqual = self.deliveringNow.toUpperCase() === "TRUE";
+            if(areEqual) {
                 jQuery(self.deliveryImgClass).attr("src", self.deliveryImgOn);
                 jQuery(self.deliveryCaptionClass).text(self.deliveryCaptionMsg);
             }
